@@ -1,7 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './style/index.less';
-import logo from './static/juventus.png'
+import logo from './static/juventus.png';
+import { BrowserRouter } from 'react-router-dom';
+import Router from './router';
 
 function App() {
     return <div>
@@ -10,4 +12,9 @@ function App() {
     </div>
 }
 
-render(<App/>, document.getElementById('app'));
+render(
+    <BrowserRouter>
+       <Router/>
+    </BrowserRouter>,
+    document.getElementById('app')
+);

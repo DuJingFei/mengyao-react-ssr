@@ -7,6 +7,8 @@ module.exports = merge(baseConfig, {
     mode: 'development',
     devServer: {
         port: 6611,
+       // hostname:'localhost',
+        disableHostCheck: true
     },
     plugins: [
         new webpack.DefinePlugin({

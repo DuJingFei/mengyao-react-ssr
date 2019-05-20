@@ -14,10 +14,10 @@ const list = [
     'ssr更有意思'
 ]
 
-const list = () => (
-   <ul>
-       { list.map((item,i) => <li key={i}>{item}</li>)}
-   </ul>
+const List = () => (
+    <ul>
+        { list.map((item, i) => <li key={ i }>{ item }</li>) }
+    </ul>
 )
 
 export default () => (
