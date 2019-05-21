@@ -1,19 +1,20 @@
+// pages/home.js
 import { Link } from 'react-router-dom';
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Home = props => {
-   <div>
-       <h1>{ props.title }</h1>
-       <Link to='/list'>跳转列表页</Link>
-   </div>
-}
+const Home = props => (
+    <div>
+        <h1>{ props.title }</h1>
+        <Link to="/list">跳转列表页杜景霏</Link>
+    </div>
+)
 
 /**
- * 通过connect 将redux中的数据传递进入组件
+ * 通过connect将redux中的数据传递进入组件
  */
-function mapStateTpProps(state) {
-   return { ...state.home };
+function mapStateToProps(state) {
+    return { ...state.home };
 }
 
-export default connect(mapStateTpProps)(Home)
+export default connect(mapStateToProps)(Home)

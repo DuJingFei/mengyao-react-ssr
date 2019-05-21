@@ -1,13 +1,15 @@
+// reducers/list.js
 const defaultState = {
-   list: [
-       'react真好玩哈',
-       'koa有点儿意思哈',
-       'ssr更有意思哈'
-   ]
+    list: [
+        'react真好玩',
+        'koa有点意思',
+        'ssr更有意思'
+    ]
 }
 
-export default function(state = defaultState, action) {
-    switch(action.type) {
-       default: return state
+export default function(state  = defaultState , action) {
+    switch (action.type) {
+        default:
+            return state
     }
 }

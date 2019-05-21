@@ -3,12 +3,22 @@ import React from 'react';
 import Home from './pages/home';
 import List from './pages/list';
 
-export default () => {
+/*
+export default () => (
     <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/list' component={List} />
+        <Route exact path="/" component={ Home }/>
+        <Route exact path="/list" component={ List }/>
     </Switch>
-}
+) */
+
+export default function() {
+    return (
+        <Switch>
+            <Route exact path="/" component={ Home }/> 
+            <Route exact path="/list" component={ List }/>
+        </Switch>
+    )
+} 
 
 /*
 const Home = () => (

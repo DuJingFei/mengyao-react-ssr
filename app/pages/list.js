@@ -11,8 +11,8 @@ const List = props => (
 /**
  * 通过connect将redux中的数据传递进入组件
  */
-function mapStateTpProps(state) {
+function mapStateToProps(state) {
     return { ...state.list };
 }
 
-export default connect(mapStateTpProps)(List)
+export default connect(mapStateToProps)(List)
