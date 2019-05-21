@@ -4,6 +4,8 @@ import './style/index.less';
 import logo from './static/juventus.png';
 import { BrowserRouter } from 'react-router-dom';
 import Router from './router';
+import { Provider } from 'react-dom';
+import createStore from './redux/store/create';
 
 function App() {
     return <div>
@@ -12,9 +14,13 @@ function App() {
     </div>
 }
 
+const store = createStore();
+
 render(
-    <BrowserRouter>
-       <Router/>
-    </BrowserRouter>,
+   <Provider store={store}>
+      <BrowserRouter>
+         <Router/>
+      </BrowserRouter>
+   </Provider>,
     document.getElementById('app')
 );

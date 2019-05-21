@@ -1,6 +1,16 @@
 import { Link , Switch, Route } from 'react-router-dom';
 import React from 'react';
+import Home from './pages/home';
+import List from './pages/list';
 
+export default () => {
+    <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/list' component={List} />
+    </Switch>
+}
+
+/*
 const Home = () => (
     <div>
         <h1>首页</h1>
@@ -18,7 +28,8 @@ const List = () => (
     <ul>
         { list.map((item, i) => <li key={ i }>{ item }</li>) }
     </ul>
-)
+) 
+
 
 export default () => (
     <Switch>
@@ -26,3 +37,4 @@ export default () => (
         <Route exact path="/list" component={ List }/>
     </Switch>
 )
+*/
